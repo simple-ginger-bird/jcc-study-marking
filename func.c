@@ -1,4 +1,21 @@
-void p1(int* p)
+#include <func.h>
+
+char get_user_id(char name, char stdnum, char wclass){
+	printf("JCC 스터디 신청 테스트입니다!!\n");
+
+	printf("이름을 입력한 뒤, Enter 키를 눌러주세요.");
+	gets(name);
+
+	printf("학번을 입력한 뒤, Enter 키를 눌러주세요.");
+	gets(stdnum);
+
+	printf("학과를 입력한 뒤, Enter 키를 눌러주세요.");
+	gets(wclass);
+
+	return (char name, char stdnum, char wclass)
+}
+
+void question_1(int* p)
 {
 
 	//첫 번째 문제들 
@@ -106,7 +123,7 @@ void p1(int* p)
 
 }
 
-void p2(int* p)
+void question_2(int* p)
 {
 	//두 번째 문제들 
 
@@ -251,7 +268,7 @@ void p2(int* p)
 	getchar();
 }
 
-void p3(int* p)
+void question_3(int* p)
 {
 	//세 번째 문제들 
 
@@ -306,7 +323,7 @@ void p3(int* p)
 
 }
 
-void p4(int* p) {
+void question_4(int* p) {
 	//네 번째 문제들
 	printf("4. 다음 문제들은 듣기 문제들입니다.\n\n");
 	printf("듣기 문제는 한 번만 들려주지만, 동영상을 되감기하여 여러 번 들을 수 있습니다.\n");
@@ -321,4 +338,60 @@ void p4(int* p) {
 	printf("\n\n(4-2) 다음을 듣고 우리말로 해석하시오.(한 줄에 해석을 모두 적어주신 후 엔터를 눌러주세요. 그렇지 않으면, 바로 다음으로 넘어갑니다.)\n");
 	printf("정답:");
 	gets(ans4[1]);
+}
+
+int calculate() {
+	for (i = 0; i < 11; i++) {
+		if (ans1[i] == 5) {
+			score1 = score1 + 0;
+		}
+		else if (ans1[i] == rans1[i]) {
+			score1 = score1 + 2;
+		}
+		else {
+			score1--;
+		}
+	}
+
+	for (i = 0; i < 15; i++) {
+		if (ans2[i] == 5) {
+			score2 = score2 + 0;
+		}
+		else if (ans2[i] == rans2[i]) {
+			score2 = score2 + 2;
+		}
+		else {
+			score2--;
+		}
+	}
+}
+
+void export_result() {
+	FILE* fp = NULL;
+	fp = fopen("JCC_test.txt", "a");
+	fprintf(fp, "이름:%s\n", name);
+	fprintf(fp, "학번:%s\n", stdnum);
+	fprintf(fp, "학과:%s\n", wclass);
+	fprintf(fp, "\n\n");
+	fprintf(fp, "1번 문제 점수: %d\n", score1);
+	fprintf(fp, "2번 문제 점수: %d\n", score2);
+	fprintf(fp, "1,2번 점수 합계: %d\n", score1 + score2);
+	fprintf(fp, "\n\n");
+	for (i = 0; i < 11; i++) {
+		fprintf(fp, "(3-%d)번 문제 정답 : %s\n", i + 1, ans3[i]);
+	}
+	fprintf(fp, "\n\n");
+	for (i = 0; i < 2; i++) {
+		fprintf(fp, "(4-%d)번 문제 정답 : %s\n", i + 1, ans4[i]);
+	}
+
+	fclose(fp);
+
+}
+
+void closing() {
+	printf("\n\n\n\n수고하셨습니다!\n");
+	printf("이제, 프로그램을 실행시킨 폴더에 JCC_test라는 이름의 메모파일이 생성되었을 것입니다.\n");
+	printf("그 파일을 학습부에게 건네주시면 됩니다.\n");
+	printf("본 창은 이제 x를 눌러 끄셔도 좋습니다.\n\n\n\n");
 }
