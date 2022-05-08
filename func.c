@@ -15,6 +15,19 @@ char get_user_id(char name, char stdnum, char wclass){
 	return (char name, char stdnum, char wclass)
 }
 
+void import_answer() {
+	/*
+	1. 사전에 txt 또는 .csv로 문제의 답안을 저장해 둔다.	
+	-> 수작업 또는 파일 작성이 가능한 프로그램 작성?
+
+	2. 해당 .txt, .csv 파일에서 답만을 추출한다.
+	ex. void read_answer_from_file();
+
+	3. 파일에서 추출한 답안을 배열에 저장한다.
+	ex. void save_answer();
+	*/
+}
+
 void question_1(int* p)
 {
 
@@ -22,6 +35,7 @@ void question_1(int* p)
 	printf("\n\n\n1. 주어진 히라가나를 보고, 히라가나와 일치하는 로마자에 맞는 번호를 입력해주세요.\n");
 	printf("(정답이 1번이라고 생각한다면, 1만을 입력 후 엔터. 다른 문자나 답은 오답 처리됩니다.)\n\n");
 
+	//문제 형태를 구조체로 구현?
 	printf("(1-1)きく\n");
 	printf("1-kiku\n");
 	printf("2-sora\n");
