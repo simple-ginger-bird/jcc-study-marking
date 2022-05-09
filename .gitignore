@@ -56,6 +56,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+### 2022.05.29 수동 추가 ###
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
 ### C++ ###
 # Prerequisites
 
