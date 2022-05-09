@@ -1,4 +1,4 @@
-#include <func.h>
+#include "func.h"
 
 char get_user_id(char name, char stdnum, char wclass){
 	printf("JCC 스터디 신청 테스트입니다!!\n");
