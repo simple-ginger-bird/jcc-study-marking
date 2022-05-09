@@ -1,5 +1,5 @@
 //사용자 정의 헤더 파일
-#include <func.h>
+#include "func.h"
 
 int main(void)
 {

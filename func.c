@@ -354,7 +354,7 @@ void question_4(int* p) {
 	gets(ans4[1]);
 }
 
-int calculate() {
+void calculate() {
 	for (i = 0; i < 11; i++) {
 		if (ans1[i] == 5) {
 			score1 = score1 + 0;
