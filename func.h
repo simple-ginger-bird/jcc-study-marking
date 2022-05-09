@@ -1,5 +1,6 @@
-#ifndef _HEADER_H_
-#define _HEADER_H_
+#ifndef _FUNC_H_
+#define _FUNC_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 
