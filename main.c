@@ -1,11 +1,14 @@
-//사용자 정의 헤더 파일
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
 #include "func.h"
 
 int main(void)
 {
 	//시험 응시자의 이름, 학번, 학과 입력
-	char get_user_id();
 	
+	test();	//void test(); 하면 오류 생성
+
 	//사전에 파일로 저장된 답안 불러오기
 	void import_answer();
 
