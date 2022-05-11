@@ -1,27 +1,30 @@
 #define _CRT_SECURE_NO_WARNINGS
-
-#include <stdio.h>
-#include <stdlib.h>
 #include "func.h"
 
-void test() {
-	printf("Hello test()!\n");
-}
-
-void get_user_id(char in_stdName, char in_stdNum, char in_stdMajor){
+void get_user_id(){
 	printf("JCC 스터디 신청 테스트입니다!!\n");
 
+	char temp [20] ;	//문자열 입력용 임시 지역변수
+
+
 	printf("이름을 입력한 뒤, Enter 키를 눌러주세요.\n");
-	printf("예시 : 홍길동");
-	gets(in_stdName);
+	printf("예시 : 홍길동\n");
+	gets(temp);
+
+	for (int i = 0; i < 20; i++) {
+		stdName[i] = temp[i];
+	}
+	for (int i = 0; i < 19; i++) {
+		printf("%s", stdName[i]);
+	}
 
 	printf("학번을 입력한 뒤, Enter 키를 눌러주세요.\n");
-	printf("예시 : 12345678");
-	gets(in_stdNum);
+	printf("예시 : 12345678\n");
+	gets(temp);
 
-	printf("학과를 입력한 뒤, Enter 키를 눌러주세요.");
-	printf("예시 : 컴퓨터공학과");
-	gets(in_stdMajor);
+	printf("학과를 입력한 뒤, Enter 키를 눌러주세요.\n");
+	printf("예시 : 컴퓨터공학과\n");
+	gets(temp);
 }
 
 /*

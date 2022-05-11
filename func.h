@@ -1,8 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
 
-void test();
 
-void get_user_id(char in_stdName, char in_stdNum, char in_stdMajor);
+void get_user_id(void);
 
 void import_answer();
 
@@ -44,10 +45,10 @@ struct descriptive_question {
 */
 
 
-char stdName[10];
+char stdName[20];
 char stdNum[20];
-char stdMajor[10];
-char* cp;
+char stdMajor[20];
+
 
 /*
 char* stdName;
