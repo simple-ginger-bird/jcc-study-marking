@@ -1,20 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "func.h"
 
-char get_user_id(char name, char stdnum, char wclass){
+void get_user_id(){
 	printf("JCC 스터디 신청 테스트입니다!!\n");
 
-	printf("이름을 입력한 뒤, Enter 키를 눌러주세요.");
-	gets(name);
+	char temp [20] ;	//문자열 입력용 임시 지역변수
 
-	printf("학번을 입력한 뒤, Enter 키를 눌러주세요.");
-	gets(stdnum);
 
-	printf("학과를 입력한 뒤, Enter 키를 눌러주세요.");
-	gets(wclass);
+	printf("이름을 입력한 뒤, Enter 키를 눌러주세요.\n");
+	printf("예시 : 홍길동\n");
+	gets(temp);
 
-	return (char name, char stdnum, char wclass)
+	for (int i = 0; i < 20; i++) {
+		stdName[i] = temp[i];
+	}
+	for (int i = 0; i < 19; i++) {
+		printf("%s", stdName[i]);
+	}
+
+	printf("학번을 입력한 뒤, Enter 키를 눌러주세요.\n");
+	printf("예시 : 12345678\n");
+	gets(temp);
+
+	printf("학과를 입력한 뒤, Enter 키를 눌러주세요.\n");
+	printf("예시 : 컴퓨터공학과\n");
+	gets(temp);
 }
 
+/*
 void import_answer() {
 	/*
 	1. 사전에 txt 또는 .csv로 문제의 답안을 저장해 둔다.	
@@ -25,7 +38,7 @@ void import_answer() {
 
 	3. 파일에서 추출한 답안을 배열에 저장한다.
 	ex. void save_answer();
-	*/
+	
 }
 
 void question_1(int* p)
@@ -354,7 +367,7 @@ void question_4(int* p) {
 	gets(ans4[1]);
 }
 
-int calculate() {
+void calculate() {
 	for (i = 0; i < 11; i++) {
 		if (ans1[i] == 5) {
 			score1 = score1 + 0;
@@ -383,9 +396,9 @@ int calculate() {
 void export_result() {
 	FILE* fp = NULL;
 	fp = fopen("JCC_test.txt", "a");
-	fprintf(fp, "이름:%s\n", name);
-	fprintf(fp, "학번:%s\n", stdnum);
-	fprintf(fp, "학과:%s\n", wclass);
+	fprintf(fp, "이름:%s\n", stdName);
+	fprintf(fp, "학번:%s\n", stdNum);
+	fprintf(fp, "학과:%s\n", stdMajor);
 	fprintf(fp, "\n\n");
 	fprintf(fp, "1번 문제 점수: %d\n", score1);
 	fprintf(fp, "2번 문제 점수: %d\n", score2);
@@ -409,3 +422,5 @@ void closing() {
 	printf("그 파일을 학습부에게 건네주시면 됩니다.\n");
 	printf("본 창은 이제 x를 눌러 끄셔도 좋습니다.\n\n\n\n");
 }
+
+*/

@@ -1,20 +1,22 @@
-//사용자 정의 헤더 파일
-#include <func.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include "func.h"
 
 int main(void)
 {
-	//시험 응시자의 이름, 학번, 학과 입력
-	char get_user_id();
-	
+	//시험 응시자의 정보(이름, 학과, 학번) 입력
+	get_user_id();
+
 	//사전에 파일로 저장된 답안 불러오기
-	void import_answer();
+	//import_answer();
 
 	//1~4번 문제 풀이
-	void question_1();
-	void question_2();
-	void question_3();
-	void question_4();
-
+	/*
+	question_1();
+	question_2();
+	question_3();
+	question_4();
+	*/
 	//점수 계산
 	void calculate();
 
